@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asistente de tickets</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="encabezado">
+        <h1>Asistente de tickets</h1>
+        <button type="button" id="nueva-conversacion" class="boton-secundario">Nueva conversación</button>
+      </header>
+
+      <main id="mensajes" class="mensajes" role="log" aria-live="polite" aria-label="Conversación"></main>
+
+      <form id="formulario" class="formulario" autocomplete="off">
+        <label for="entrada" class="solo-lectores">Escribe tu consulta</label>
+        <textarea id="entrada" rows="1" placeholder="Escribe tu consulta…" maxlength="4000"></textarea>
+        <button type="submit" id="enviar" class="boton-principal">Enviar</button>
+      </form>
+    </div>
+    <script src="vendor/marked-18.2.0.umd.js"></script>
+    <script src="vendor/purify-3.4.17.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
